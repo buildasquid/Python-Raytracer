@@ -5,23 +5,48 @@ This project is a simple yet powerful Ray Tracer implemented in Python. The prog
 
 The project is designed to be educational, showcasing the basic principles behind rendering realistic images by simulating the behavior of light as it interacts with objects in a virtual environment.
 
-##Features
+## Features
 
--Basic Ray Tracing: Implementation of ray tracing to render 3D objects into 2D images.
--Materials and Shading: Supports different materials including diffuse and reflective surfaces, as well as a chequered material.
--Lighting Models: Implements basic lighting models including ambient, diffuse (Lambertian), and specular (Blinn-Phong) shading.
--Multiple Light Sources: Ability to handle multiple light sources with different colors and intensities.
--Scene Configuration: Scenes can be easily configured with different objects, materials, and lights.
+- Ray Tracing Algorithm: A basic ray tracing algorithm capable of rendering scenes with multiple light sources, reflective materials, and realistic shading.
+- Scene Description File: The ability to define custom scenes in separate files, which are then loaded and rendered by the main program.
+- Phong Shading: Supports ambient, diffuse, and specular lighting using the Phong shading model for realistic lighting effects.
+- Chequered Material: Includes a chequered pattern material that provides a textured appearance based on the object's surface.
+- Recursive Reflection: Handles reflections by recursively tracing rays for reflective surfaces, adding realism to the rendered scenes.
+- Testing Suite: A set of unit tests to ensure the correctness of the Vector class, which is fundamental to the ray tracing calculations.
 
-##Structure
 
--main.py: The entry point of the application. Handles the setup and rendering of the scene.
--image.py: Manages the creation and saving of the rendered image.
--ray.py: Defines the Ray class, which represents a ray in 3D space.
--color.py: Defines the Color class, which handles color operations.
--point.py: Defines the Point class, representing a point in 3D space.
--vector.py: Defines the Vector class, representing vectors in 3D space.
--sphere.py: Implements the Sphere class, representing spherical objects in the scene.
--material.py: Defines different materials like diffuse and chequered materials.
--light.py: Implements the Light class, representing light sources in the scene.
--scene.txt: A sample scene file defining objects, lights, and camera position.
+## Structure
+
+- color.py: Defines the Color class, representing RGB colors and supporting operations like addition, multiplication, and conversion from hexadecimal.
+- engine.py: Contains the RenderEngine class, which handles the rendering process, including ray tracing, light calculations, and recursive reflections.
+- image.py: Implements the Image class, responsible for creating and manipulating the final image, setting pixel colors, and saving the image to a file.
+- light.py: Defines the Light class, representing point light sources in the scene and their properties.
+- main.py: The entry point of the application. Loads a scene from a specified file and triggers the rendering process using the RenderEngine.
+- material.py: Contains the Material and ChequeredMaterial classes, which define surface properties of objects, such as color, reflection, and texture patterns.
+- point.py: Implements the Point class, representing 3D points in space, used extensively in ray-object intersection calculations.
+- ray.py: Defines the Ray class, representing a ray with an origin and direction, essential for tracing the path of light through the scene.
+- scene.py: Contains the Scene class, which manages the collection of objects, lights, and the camera within the 3D environment.
+- sphere.py: Implements the Sphere class, representing spherical objects in the scene, including methods for determining ray-sphere intersections.
+- tests.py: A test suite for validating the functionality of the Vector class, ensuring correctness in vector operations used throughout the project.
+- vector.py: Defines the Vector class, which handles 3D vector operations, such as addition, subtraction, dot product, cross product, and normalization.
+
+
+## Render Engine
+The RenderEngine class, located in engine.py, is the core component responsible for:
+
+- Rendering Process: Iterates over each pixel in the image, shooting rays into the scene to determine the color based on intersections with objects and lighting.
+- Ray Tracing: Traces rays from the camera through each pixel, calculates intersections with objects, and determines the final color using the Phong shading model.
+- Recursive Reflections: Handles reflective surfaces by recursively tracing rays to simulate reflections, contributing to the realism of the rendered image.
+- Lighting Calculations: Calculates the effect of light sources on the color of objects, including ambient, diffuse, and specular reflections.
+
+## Usage
+1. Scene Setup: Create a scene description file specifying the camera, objects, lights, and their properties.
+2. Running the Project: Use the following command to render a scene:
+   ```python main.py foldername.filename```
+3. Output: The rendered image will be saved in the specified format (e.g., PPM) in the project directory.
+
+## Example output
+### Output for the file "7spheres.py"
+![image](https://github.com/user-attachments/assets/b028c139-35f7-49b4-a01e-ebe25639fecf)
+
+   
