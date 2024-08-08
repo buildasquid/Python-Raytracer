@@ -48,5 +48,6 @@ The RenderEngine class, located in engine.py, is the core component responsible 
 ## Example output
 ### Output for the file "6spheres.py"
 ![image](https://github.com/user-attachments/assets/b028c139-35f7-49b4-a01e-ebe25639fecf)
-
+### Output for the file "trafficlight.py"
+![image](https://github.com/user-attachments/assets/ebbb1177-aa7c-4e37-a923-33aaf068124d)
    
