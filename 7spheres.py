@@ -7,11 +7,11 @@ from material import Material, ChequeredMaterial # type: ignore
 
 WIDTH = 960
 HEIGHT = 540
-RENDERED_IMG = "7balls.ppm"
+RENDERED_IMG = "7balls.ppm"  # the output image is a .ppm file
 CAMERA = Vector(0, -0.35, -1)
 
 OBJECTS = [
-    # Sphere 1 with Chequered Material
+    # Sphere 1 with Chequered Material (acts a sort of ground plane)
     Sphere(Point(0, 10000.5, 1), 10000.0, ChequeredMaterial(color1=Color.from_hex("#FF0000"), color2=Color.from_hex("#FFFF00"), ambient=0.2, reflection=0.2)),
 
     # Sphere 2 - Blue
