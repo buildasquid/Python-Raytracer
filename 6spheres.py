@@ -20,16 +20,13 @@ OBJECTS = [
     # Sphere 3 - Green
     Sphere(Point(-1.5, 0.3, 2.5), 0.4, Material(Color.from_hex("#00FF00"))),
 
-    # Sphere 4 - Purple
-    Sphere(Point(0.5, 1.0, 1.75), 0.3, Material(Color.from_hex("#800080"))),
-
-    # Sphere 5 - Orange
+    # Sphere 4 - Orange
     Sphere(Point(-0.5, -1.0, 3.5), 0.5, Material(Color.from_hex("#FFA500"))),
 
-    # Sphere 6 - Cyan
+    # Sphere 5 - Cyan
     Sphere(Point(1.0, 0.5, 2.0), 0.35, Material(Color.from_hex("#00FFFF"))),
 
-    # Sphere 7 - Pink
+    # Sphere 6 - Pink
     Sphere(Point(-1.0, -0.8, 2.2), 0.45, Material(Color.from_hex("#FFC0CB")))
 ]
 
