@@ -3,7 +3,9 @@
 ## Project Overview
 This project is a simple yet powerful Ray Tracer implemented in Python. The program generates 3D scenes and renders them into 2D images using ray tracing techniques. This is a fundamental project in computer graphics, demonstrating key concepts such as lighting, shading, reflection, and material properties.
 
-The project is designed to be educational, showcasing the basic principles behind rendering realistic images by simulating the behavior of light as it interacts with objects in a virtual environment.
+This project is, more than anything, an attempt to understand raytracing and how it works, as well as get more accustomed to python programming. I am passionate about 3D modeling, but until now I haven't paid much attention to the inner workings of rendering images.
+
+Hence, the project is designed to be educational, showcasing the basic principles behind rendering realistic images by simulating the behavior of light as it interacts with objects.
 
 ## Features
 
@@ -43,11 +45,25 @@ The RenderEngine class, located in engine.py, is the core component responsible 
 1. Scene Setup: Create a scene description file specifying the camera, objects, lights, and their properties.
 2. Running the Project: Use the following command to render a scene:
    ```python main.py foldername.filename```
-3. Output: The rendered image will be saved in the specified format (e.g., PPM) in the project directory.
+   Since my scene files were inside a folder called "examples" that was inside my project folder, i ran the command
+   ```python main.py examples.trafficlight```
+4. Output: The rendered image will be saved in the specified format (e.g., PPM) in the project directory.
 
 ## Example output
 ### Output for the file "6spheres.py"
 ![image](https://github.com/user-attachments/assets/b028c139-35f7-49b4-a01e-ebe25639fecf)
 ### Output for the file "trafficlight.py"
 ![image](https://github.com/user-attachments/assets/ebbb1177-aa7c-4e37-a923-33aaf068124d)
-   
+
+## Future Modifications / Enhancements
+- Support for More Shapes: Adding support for additional geometric shapes such as planes(currently planes are represented by very large spheres), triangles, or other meshes.
+- Advanced Materials: Implementing more complex materials like glass (refraction) and metals.
+- Shadows and Anti-aliasing: Adding shadow rays for realistic lighting and anti-aliasing to reduce jagged edges.
+- Other Materials: Experimenting more with texture and patterns
+
+## Tools
+Since the rendered images are .ppm format, i used IrfanView to view the rendered images
+
+### License
+This project is open source and available under the MIT License
+
