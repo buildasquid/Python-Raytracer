@@ -46,7 +46,7 @@ The RenderEngine class, located in engine.py, is the core component responsible 
 3. Output: The rendered image will be saved in the specified format (e.g., PPM) in the project directory.
 
 ## Example output
-### Output for the file "7spheres.py"
+### Output for the file "6spheres.py"
 ![image](https://github.com/user-attachments/assets/b028c139-35f7-49b4-a01e-ebe25639fecf)
 
    
