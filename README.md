@@ -1,7 +1,7 @@
 # Python-Raytracer
 
 ## Project Overview
-This project is a simple yet powerful Ray Tracer implemented in Python. The program generates 3D scenes and renders them into 2D images using ray tracing techniques. This is a fundamental project in computer graphics, demonstrating key concepts such as lighting, shading, reflection, and material properties.
+This project is a simple Ray Tracer implemented in Python. The program generates 3D scenes and renders them into 2D images using ray tracing.Key concepts: lighting, shading, reflection, and material properties.
 
 This project is, more than anything, an attempt to understand raytracing and how it works, as well as get more accustomed to python programming. I am passionate about 3D modeling, but until now I haven't paid much attention to the inner workings of rendering images.
 
@@ -34,7 +34,7 @@ Hence, the project is designed to be educational, showcasing the basic principle
 
 
 ## Render Engine
-The RenderEngine class, located in engine.py, is the core component responsible for:
+The RenderEngine class, located in engine.py, is responsible for:
 
 - Rendering Process: Iterates over each pixel in the image, shooting rays into the scene to determine the color based on intersections with objects and lighting.
 - Ray Tracing: Traces rays from the camera through each pixel, calculates intersections with objects, and determines the final color using the Phong shading model.
